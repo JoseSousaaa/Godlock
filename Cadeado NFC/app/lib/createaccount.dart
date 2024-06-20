@@ -336,7 +336,10 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                         fontWeight: FontWeight.w500,
                                       ),
                                       validator: (value) {
-                                        if (value == null || value.isEmpty) {
+                                        // ignore: lines_longer_than_80_chars
+                                        if (value == null ||
+                                            value == _passwordController1 ||
+                                            value.isEmpty) {
                                           return 'Please confirm your password';
                                         }
                                         return null;
