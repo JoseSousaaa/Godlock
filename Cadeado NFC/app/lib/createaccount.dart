@@ -42,7 +42,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
               child: Container(
                 width: 100,
                 height: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [Color(0xFF4B39EF), Color(0xFFEE8B60)],
                     stops: [0, 1],
@@ -50,7 +50,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                     end: AlignmentDirectional(-0.87, 1),
                   ),
                 ),
-                alignment: AlignmentDirectional(0, -1),
+                alignment: const AlignmentDirectional(0, -1),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -61,7 +61,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                         child: Container(
                           width: 200,
                           height: 70,
-                          alignment: AlignmentDirectional(0, 0),
+                          alignment: const AlignmentDirectional(0, 0),
                           child: Text(
                             'GOLOCK',
                             style: GoogleFonts.plusJakartaSans(
