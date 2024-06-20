@@ -61,14 +61,14 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                         padding: const EdgeInsets.fromLTRB(0, 70, 0, 32),
                         child: Container(
                           width: 200,
-                          height: 70,
+                          height: 100,
                           alignment: const AlignmentDirectional(0, 0),
                           child: Text(
-                            'GOLOCK',
+                            'GODLOCK',
                             style: GoogleFonts.plusJakartaSans(
-                              color: Colors.white,
+                              color: Color.fromARGB(255, 253, 253, 253),
                               fontSize: 36,
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.w800,
                             ),
                           ),
                         ),
@@ -109,21 +109,21 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        0, 12, 0, 24),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 12, 0, 24),
                                     child: Text(
                                       'Let\'s get started by filling out the form below.',
                                       textAlign: TextAlign.center,
                                       style: GoogleFonts.plusJakartaSans(
-                                        color: const Color(0xFF57636C),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w700,
                                       ),
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        0, 0, 0, 16),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 16),
                                     child: TextFormField(
                                       controller: _emailController,
                                       autofocus: true,
@@ -148,25 +148,22 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFF4B39EF),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFF4B39EF),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
                                         errorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFFE0E3E7),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFFE0E3E7),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFFE0E3E7),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFFE0E3E7),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
@@ -188,14 +185,12 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        0, 0, 0, 16),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 16),
                                     child: TextFormField(
                                       controller: _fullNameController,
                                       autofocus: true,
-                                      autofillHints: const [
-                                        AutofillHints.name
-                                      ],
+                                      autofillHints: const [AutofillHints.name],
                                       obscureText: false,
                                       decoration: InputDecoration(
                                         labelText: 'Full Name',
@@ -214,25 +209,22 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFF4B39EF),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFF4B39EF),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
                                         errorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFFE0E3E7),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFFE0E3E7),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFFE0E3E7),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFFE0E3E7),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
@@ -254,8 +246,8 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        0, 0, 0, 16),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 16),
                                     child: TextFormField(
                                       controller: _passwordController1,
                                       autofillHints: const [
@@ -279,25 +271,22 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFF4B39EF),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFF4B39EF),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
                                         errorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFFFF5963),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFFFF5963),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFFFF5963),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFFFF5963),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
@@ -332,8 +321,8 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        0, 0, 0, 16),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 16),
                                     child: TextFormField(
                                       controller: _passwordController2,
                                       autofillHints: const [
@@ -357,25 +346,22 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFF4B39EF),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFF4B39EF),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
                                         errorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFFFF5963),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFFFF5963),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFFFF5963),
-                                            width: 2,
-                                          ),
+                                              color: Color(0xFFFF5963),
+                                              width: 2),
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
@@ -412,46 +398,6 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                       },
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 16),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        IconButton(
-                                          icon: const FaIcon(
-                                            FontAwesomeIcons.google,
-                                            color: Color(0xFF57636C),
-                                            size: 20,
-                                          ),
-                                          onPressed: () {
-                                            // Add your logic for Google Sign Up here
-                                          },
-                                        ),
-                                        IconButton(
-                                          icon: const FaIcon(
-                                            FontAwesomeIcons.apple,
-                                            color: Color(0xFF57636C),
-                                            size: 20,
-                                          ),
-                                          onPressed: () {
-                                            // Add your logic for Apple Sign Up here
-                                          },
-                                        ),
-                                        IconButton(
-                                          icon: const FaIcon(
-                                            FontAwesomeIcons.facebookF,
-                                            color: Color(0xFF57636C),
-                                            size: 20,
-                                          ),
-                                          onPressed: () {
-                                            // Add your logic for Facebook Sign Up here
-                                          },
-                                        ),
-                                      ],
-                                    ),
-                                  ),
                                   Align(
                                     alignment: const AlignmentDirectional(0, 5),
                                     child: ElevatedButton(
@@ -463,8 +409,10 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                       },
                                       child: const Text('Create Account'),
                                       style: ElevatedButton.styleFrom(
-                                        iconColor:
-                                            Theme.of(context).primaryColor,
+                                        backgroundColor:
+                                            Color.fromARGB(255, 55, 77, 239),
+                                        foregroundColor:
+                                            Color.fromARGB(255, 243, 243, 245),
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 24, vertical: 12),
                                         shape: RoundedRectangleBorder(
@@ -474,21 +422,63 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                       ),
                                     ),
                                   ),
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text(
-                                      'Login',
-                                      style: GoogleFonts.plusJakartaSans(
-                                        color: const Color(0xFF4B39EF),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ),
                                 ],
                               ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 16),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: const FaIcon(
+                                FontAwesomeIcons.google,
+                                color: Color(0xFF57636C),
+                                size: 20,
+                              ),
+                              onPressed: () {
+                                // Add your logic for Google Sign Up here
+                              },
+                            ),
+                            IconButton(
+                              icon: const FaIcon(
+                                FontAwesomeIcons.apple,
+                                color: Color(0xFF57636C),
+                                size: 20,
+                              ),
+                              onPressed: () {
+                                // Add your logic for Apple Sign Up here
+                              },
+                            ),
+                            IconButton(
+                              icon: const FaIcon(
+                                FontAwesomeIcons.facebookF,
+                                color: Color(0xFF57636C),
+                                size: 20,
+                              ),
+                              onPressed: () {
+                                // Add your logic for Facebook Sign Up here
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 32),
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            'Login',
+                            style: GoogleFonts.plusJakartaSans(
+                              color: const Color(0xFF4B39EF),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),
