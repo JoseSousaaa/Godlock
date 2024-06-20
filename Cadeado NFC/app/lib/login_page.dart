@@ -79,7 +79,7 @@ class _LoginWidgetState extends State<LoginWidget>
                       'GODLOCK\n',
                       style: GoogleFonts.plusJakartaSans(
                         color: Colors.white,
-                        fontSize: 50,
+                        fontSize: 36,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -323,10 +323,10 @@ class _LoginWidgetState extends State<LoginWidget>
                                 );
                               },
                               child: Text(
-                                'Sign Up',
+                                'Create Account',
                                 style: GoogleFonts.plusJakartaSans(
                                   color: const Color(0xFF4B39EF),
-                                  fontSize: 14,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),

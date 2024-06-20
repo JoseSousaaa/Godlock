@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-// ignore: unused_import
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CreateaccountWidget extends StatefulWidget {
@@ -12,6 +11,7 @@ class CreateaccountWidget extends StatefulWidget {
 
 class _CreateaccountWidgetState extends State<CreateaccountWidget> {
   final _emailController = TextEditingController();
+  final _fullNameController = TextEditingController();
   final _passwordController1 = TextEditingController();
   final _passwordController2 = TextEditingController();
 
@@ -23,6 +23,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
   @override
   void dispose() {
     _emailController.dispose();
+    _fullNameController.dispose();
     _passwordController1.dispose();
     _passwordController2.dispose();
     super.dispose();
@@ -76,7 +77,6 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                         padding: const EdgeInsets.all(16),
                         child: Container(
                           width: double.infinity,
-                          height: 600,
                           constraints: const BoxConstraints(
                             maxWidth: 570,
                           ),
@@ -109,8 +109,8 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 12, 0, 24),
+                                    padding: const EdgeInsets.fromLTRB(
+                                        0, 12, 0, 24),
                                     child: Text(
                                       'Let\'s get started by filling out the form below.',
                                       textAlign: TextAlign.center,
@@ -122,8 +122,8 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                                    padding: const EdgeInsets.fromLTRB(
+                                        0, 0, 0, 16),
                                     child: TextFormField(
                                       controller: _emailController,
                                       autofocus: true,
@@ -188,8 +188,74 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                                    padding: const EdgeInsets.fromLTRB(
+                                        0, 0, 0, 16),
+                                    child: TextFormField(
+                                      controller: _fullNameController,
+                                      autofocus: true,
+                                      autofillHints: const [
+                                        AutofillHints.name
+                                      ],
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        labelText: 'Full Name',
+                                        labelStyle: GoogleFonts.plusJakartaSans(
+                                          color: const Color(0xFF57636C),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide: const BorderSide(
+                                            color: Color(0xFFF1F4F8),
+                                            width: 2,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide: const BorderSide(
+                                            color: Color(0xFF4B39EF),
+                                            width: 2,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        errorBorder: OutlineInputBorder(
+                                          borderSide: const BorderSide(
+                                            color: Color(0xFFE0E3E7),
+                                            width: 2,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        focusedErrorBorder: OutlineInputBorder(
+                                          borderSide: const BorderSide(
+                                            color: Color(0xFFE0E3E7),
+                                            width: 2,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        filled: true,
+                                        fillColor: const Color(0xFFF1F4F8),
+                                      ),
+                                      style: GoogleFonts.plusJakartaSans(
+                                        color: const Color(0xFF101213),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      keyboardType: TextInputType.name,
+                                      validator: (value) {
+                                        if (value == null || value.isEmpty) {
+                                          return 'Please enter your name';
+                                        }
+                                        return null;
+                                      },
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(
+                                        0, 0, 0, 16),
                                     child: TextFormField(
                                       controller: _passwordController1,
                                       autofillHints: const [
@@ -266,8 +332,8 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                                    padding: const EdgeInsets.fromLTRB(
+                                        0, 0, 0, 16),
                                     child: TextFormField(
                                       controller: _passwordController2,
                                       autofillHints: const [
@@ -336,14 +402,54 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                         fontWeight: FontWeight.w500,
                                       ),
                                       validator: (value) {
-                                        // ignore: lines_longer_than_80_chars
                                         if (value == null ||
-                                            value == _passwordController1 ||
+                                            value !=
+                                                _passwordController1.text ||
                                             value.isEmpty) {
-                                          return 'Please confirm your password';
+                                          return 'Passwords do not match';
                                         }
                                         return null;
                                       },
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 16),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        IconButton(
+                                          icon: const FaIcon(
+                                            FontAwesomeIcons.google,
+                                            color: Color(0xFF57636C),
+                                            size: 20,
+                                          ),
+                                          onPressed: () {
+                                            // Add your logic for Google Sign Up here
+                                          },
+                                        ),
+                                        IconButton(
+                                          icon: const FaIcon(
+                                            FontAwesomeIcons.apple,
+                                            color: Color(0xFF57636C),
+                                            size: 20,
+                                          ),
+                                          onPressed: () {
+                                            // Add your logic for Apple Sign Up here
+                                          },
+                                        ),
+                                        IconButton(
+                                          icon: const FaIcon(
+                                            FontAwesomeIcons.facebookF,
+                                            color: Color(0xFF57636C),
+                                            size: 20,
+                                          ),
+                                          onPressed: () {
+                                            // Add your logic for Facebook Sign Up here
+                                          },
+                                        ),
+                                      ],
                                     ),
                                   ),
                                   Align(
@@ -365,6 +471,19 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
+                                      ),
+                                    ),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text(
+                                      'Login',
+                                      style: GoogleFonts.plusJakartaSans(
+                                        color: const Color(0xFF4B39EF),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
                                       ),
                                     ),
                                   ),
