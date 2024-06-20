@@ -1,9 +1,12 @@
-import 'package:flutter_test/flutter_test.dart';
-import 'package:your_app/main.dart';
+import 'package:flutter_test/flutter_test.dart'
+    show WidgetTester, expect, find, findsOneWidget, testWidgets;
+import 'package:godlock_login/main.dart' show MyApp;
+// ignore: prefer_single_quotes
+import 'package:cadeado_nfc/app/lib/main.dart';
 
 void main() {
   testWidgets('Navigate to CreateAccountPage', (WidgetTester tester) async {
-    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(const MyApp());
 
     // Verifica se a LoginPage está sendo exibida inicialmente
     expect(find.text('Login Page'), findsOneWidget);
