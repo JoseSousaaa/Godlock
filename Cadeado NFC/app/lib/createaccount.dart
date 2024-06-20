@@ -437,7 +437,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                             IconButton(
                               icon: const FaIcon(
                                 FontAwesomeIcons.google,
-                                color: Color(0xFF57636C),
+                                color: Color.fromARGB(255, 255, 255, 255),
                                 size: 20,
                               ),
                               onPressed: () {
@@ -447,7 +447,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                             IconButton(
                               icon: const FaIcon(
                                 FontAwesomeIcons.apple,
-                                color: Color(0xFF57636C),
+                                color: Color.fromARGB(255, 255, 255, 255),
                                 size: 20,
                               ),
                               onPressed: () {
@@ -457,7 +457,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                             IconButton(
                               icon: const FaIcon(
                                 FontAwesomeIcons.facebookF,
-                                color: Color(0xFF57636C),
+                                color: Color.fromARGB(255, 255, 255, 255),
                                 size: 20,
                               ),
                               onPressed: () {
@@ -477,8 +477,8 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                             'Login',
                             style: GoogleFonts.plusJakartaSans(
                               color: const Color(0xFF4B39EF),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
                             ),
                           ),
                         ),
