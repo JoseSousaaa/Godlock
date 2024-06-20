@@ -476,7 +476,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                           child: Text(
                             'Login',
                             style: GoogleFonts.plusJakartaSans(
-                              color: const Color(0xFF4B39EF),
+                              color: Color.fromARGB(255, 255, 255, 255),
                               fontSize: 18,
                               fontWeight: FontWeight.w700,
                             ),
