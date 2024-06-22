@@ -3,7 +3,7 @@ import 'package:godlock_login/createaccount.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // ignore: duplicate_import
-import 'createaccount.dart'; // Importando a página de criação de contaSS
+import 'createaccount.dart'; // Importando a página de criação de conta
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({super.key});
@@ -54,7 +54,7 @@ class _LoginWidgetState extends State<LoginWidget>
           height: double.infinity,
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color(0xFF4B39EF), Color(0xFFEE8B60)],
+              colors: [Color(0xFF37597B), Color(0xFF37597B)],
               stops: [0, 1],
               begin: AlignmentDirectional(0.87, -1),
               end: AlignmentDirectional(-0.87, 1),
@@ -121,8 +121,7 @@ class _LoginWidgetState extends State<LoginWidget>
                               ),
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 24),
+                              padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 24),
                               child: Text(
                                 'Fill out the information below in order to access your account.',
                                 textAlign: TextAlign.center,
@@ -134,8 +133,7 @@ class _LoginWidgetState extends State<LoginWidget>
                               ),
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
+                              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
                               child: Container(
                                 width: double.infinity,
                                 child: TextFormField(
@@ -198,8 +196,7 @@ class _LoginWidgetState extends State<LoginWidget>
                               ),
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
+                              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
                               child: Container(
                                 width: double.infinity,
                                 child: TextFormField(
@@ -247,8 +244,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                     fillColor: const Color(0xFFF1F4F8),
                                     suffixIcon: InkWell(
                                       onTap: () => setState(
-                                        () => passwordVisibility =
-                                            !passwordVisibility,
+                                        () => passwordVisibility = !passwordVisibility,
                                       ),
                                       focusNode: FocusNode(skipTraversal: true),
                                       child: Icon(
@@ -286,9 +282,8 @@ class _LoginWidgetState extends State<LoginWidget>
                             ElevatedButton(
                               onPressed: () {
                                 setState(() {
-                                  _showErrorMessage =
-                                      emailAddressTextController.text.isEmpty ||
-                                          passwordTextController.text.isEmpty;
+                                  _showErrorMessage = emailAddressTextController.text.isEmpty ||
+                                      passwordTextController.text.isEmpty;
                                 });
 
                                 if (!_showErrorMessage) {
@@ -297,8 +292,7 @@ class _LoginWidgetState extends State<LoginWidget>
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: const Color(0xFF4B39EF),
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 32, vertical: 12),
+                                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12),
                                 ),
