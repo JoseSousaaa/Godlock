@@ -13,11 +13,7 @@ dependencies:
   google_fonts: ^4.0.3
   provider: ^6.1.2
   go_router: ^5.0.0
-   firebase_core: latest_version
-  firebase_auth: latest_version
-  cloud_firestore: latest_version
-  google_sign_in: latest_version
-  font_awesome_flutter: latest_version
+  
 
 dev_dependencies:
   flutter_test:
