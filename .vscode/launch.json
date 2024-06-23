@@ -6,20 +6,20 @@
     "configurations": [
         {
             "name": "app",
-            "cwd": "Cadeado NFC\\app",
+            "cwd": "CADEADONFC\\app",
             "request": "launch",
             "type": "dart"
         },
         {
             "name": "app (profile mode)",
-            "cwd": "Cadeado NFC\\app",
+            "cwd": "CADEADONFC\\app",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
             "name": "app (release mode)",
-            "cwd": "Cadeado NFC\\app",
+            "cwd": "CADEADONFC\\app",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
