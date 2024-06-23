@@ -34,7 +34,8 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
-        backgroundColor: Colors.white,
+        // ignore: lines_longer_than_80_chars
+        backgroundColor: const Color(0xFF37597B), // Mudança da cor do background
         body: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -45,7 +46,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                 height: double.infinity,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Color(0xFF4B39EF), Color(0xFFEE8B60)],
+                    colors: [Color(0xFF37597B), Color(0xFFABC7DE)],
                     stops: [0, 1],
                     begin: AlignmentDirectional(0.87, -1),
                     end: AlignmentDirectional(-0.87, 1),
@@ -66,7 +67,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                           child: Text(
                             'GODLOCK',
                             style: GoogleFonts.plusJakartaSans(
-                              color: Color.fromARGB(255, 253, 253, 253),
+                              color: const Color.fromARGB(255, 253, 253, 253),
                               fontSize: 36,
                               fontWeight: FontWeight.w800,
                             ),
@@ -105,25 +106,24 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     style: GoogleFonts.plusJakartaSans(
                                       color: const Color(0xFF101213),
                                       fontSize: 36,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w800,
                                     ),
                                   ),
                                   Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 12, 0, 24),
+                                    padding: const EdgeInsets.fromLTRB(0, 12, 0, 24),
                                     child: Text(
+                                      // ignore: lines_longer_than_80_chars
                                       'Let\'s get started by filling out the form below.',
                                       textAlign: TextAlign.center,
                                       style: GoogleFonts.plusJakartaSans(
-                                        color: Color.fromARGB(255, 0, 0, 0),
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w700,
+                                        color: const Color.fromARGB(255, 87, 99, 108),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
                                       ),
                                     ),
                                   ),
                                   Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
                                     child: TextFormField(
                                       controller: _emailController,
                                       autofocus: true,
@@ -143,29 +143,25 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                             color: Color(0xFFF1F4F8),
                                             width: 2,
                                           ),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                              color: Color(0xFF4B39EF),
-                                              width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                            color: Color(0xFF37597B),
+                                            width: 2),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         errorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
                                               color: Color(0xFFE0E3E7),
                                               width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
                                               color: Color(0xFFE0E3E7),
                                               width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         filled: true,
                                         fillColor: const Color(0xFFF1F4F8),
@@ -185,8 +181,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
                                     child: TextFormField(
                                       controller: _fullNameController,
                                       autofocus: true,
@@ -204,29 +199,25 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                             color: Color(0xFFF1F4F8),
                                             width: 2,
                                           ),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                              color: Color(0xFF4B39EF),
+                                              color: Color(0xFF37597B),
                                               width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         errorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
                                               color: Color(0xFFE0E3E7),
                                               width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
                                               color: Color(0xFFE0E3E7),
                                               width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         filled: true,
                                         fillColor: const Color(0xFFF1F4F8),
@@ -246,8 +237,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
                                     child: TextFormField(
                                       controller: _passwordController1,
                                       autofillHints: const [
@@ -266,29 +256,25 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                             color: Color(0xFFF1F4F8),
                                             width: 2,
                                           ),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                              color: Color(0xFF4B39EF),
+                                              color: Color(0xFF37597B),
                                               width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         errorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
                                               color: Color(0xFFFF5963),
                                               width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
                                               color: Color(0xFFFF5963),
                                               width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         filled: true,
                                         fillColor: const Color(0xFFF1F4F8),
@@ -321,8 +307,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 0, 0, 16),
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 16),
                                     child: TextFormField(
                                       controller: _passwordController2,
                                       autofillHints: const [
@@ -339,31 +324,26 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
                                             color: Color(0xFFF1F4F8),
-                                            width: 2,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                            width: 2),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                              color: Color(0xFF4B39EF),
+                                              color: Color(0xFF37597B),
                                               width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         errorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
                                               color: Color(0xFFFF5963),
                                               width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
                                               color: Color(0xFFFF5963),
                                               width: 2),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                          borderRadius: BorderRadius.circular(12),
                                         ),
                                         filled: true,
                                         fillColor: const Color(0xFFF1F4F8),
@@ -410,7 +390,7 @@ class _CreateaccountWidgetState extends State<CreateaccountWidget> {
                                       child: const Text('Create Account'),
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor:
-                                            Color.fromARGB(255, 55, 77, 239),
+                                            Color.fromARGB(255, 55, 89, 123),
                                         foregroundColor:
                                             Color.fromARGB(255, 243, 243, 245),
                                         padding: const EdgeInsets.symmetric(

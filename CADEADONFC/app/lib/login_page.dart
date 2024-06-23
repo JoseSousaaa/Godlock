@@ -12,8 +12,7 @@ class LoginWidget extends StatefulWidget {
   State<LoginWidget> createState() => _LoginWidgetState();
 }
 
-class _LoginWidgetState extends State<LoginWidget>
-    with TickerProviderStateMixin {
+class _LoginWidgetState extends State<LoginWidget> with TickerProviderStateMixin {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   late TextEditingController emailAddressTextController;
@@ -21,6 +20,7 @@ class _LoginWidgetState extends State<LoginWidget>
   late FocusNode emailAddressFocusNode;
   late FocusNode passwordFocusNode;
   bool passwordVisibility = false;
+  bool rememberMe = false; // Variável para armazenar o estado do botão "Lembrar-me"
   bool _showErrorMessage = false;
 
   @override
@@ -54,7 +54,7 @@ class _LoginWidgetState extends State<LoginWidget>
           height: double.infinity,
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color(0xFF37597B), Color(0xFF37597B)],
+              colors: [Color(0xFF37597B), Color(0xFFABC7DE)],
               stops: [0, 1],
               begin: AlignmentDirectional(0.87, -1),
               end: AlignmentDirectional(-0.87, 1),
@@ -117,7 +117,7 @@ class _LoginWidgetState extends State<LoginWidget>
                               style: GoogleFonts.plusJakartaSans(
                                 color: const Color(0xFF101213),
                                 fontSize: 36,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w800,
                               ),
                             ),
                             Padding(
@@ -158,7 +158,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: const BorderSide(
-                                        color: Color(0xFF4B39EF),
+                                        color: Color(0xFF37597B),
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(12),
@@ -221,7 +221,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: const BorderSide(
-                                        color: Color(0xFF4B39EF),
+                                        color: Color(0xFF37597B),
                                         width: 2,
                                       ),
                                       borderRadius: BorderRadius.circular(12),
@@ -270,6 +270,26 @@ class _LoginWidgetState extends State<LoginWidget>
                                 ),
                               ),
                             ),
+                            Row(
+                              children: [
+                                Checkbox(
+                                  value: rememberMe,
+                                  onChanged: (newValue) {
+                                    setState(() {
+                                      rememberMe = newValue ?? false;
+                                    });
+                                  },
+                                ),
+                                Text(
+                                  'Lembrar-me',
+                                  style: GoogleFonts.plusJakartaSans(
+                                    color: const Color(0xFF57636C),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
                             if (_showErrorMessage)
                               const Padding(
                                 padding: EdgeInsets.only(bottom: 16.0),
@@ -291,7 +311,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                 }
                               },
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF4B39EF),
+                                backgroundColor: const Color(0xFF37597B),
                                 padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12),
@@ -319,7 +339,7 @@ class _LoginWidgetState extends State<LoginWidget>
                               child: Text(
                                 'Create Account',
                                 style: GoogleFonts.plusJakartaSans(
-                                  color: const Color(0xFF4B39EF),
+                                  color: const Color(0xFF37597B),
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                 ),
