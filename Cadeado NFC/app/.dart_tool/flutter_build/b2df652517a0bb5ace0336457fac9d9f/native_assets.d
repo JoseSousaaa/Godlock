@@ -1,0 +1,1 @@
+ C:\\Users\\joaom\\Godlock\\Cadeado\ NFC\\app\\.dart_tool\\flutter_build\\b2df652517a0bb5ace0336457fac9d9f\\native_assets.yaml: 
