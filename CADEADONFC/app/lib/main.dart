@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'login_page.dart';
-// ignore: unused_import
-import 'createaccount.dart';
+// ignore: lines_longer_than_80_chars
+import 'login_page.dart'; // Certifique-se de que o login_page.dart está corretamente implementado e importado
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false, // Remove o banner de debug
       home: const LoginWidget(),
     );
   }

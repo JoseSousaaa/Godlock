@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // ignore: duplicate_import
 import 'createaccount.dart'; // Importando a página de criação de conta
+import 'menu_page.dart'; // Certifique-se de que o menu_page.dart está importado
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({super.key});
@@ -12,7 +13,8 @@ class LoginWidget extends StatefulWidget {
   State<LoginWidget> createState() => _LoginWidgetState();
 }
 
-class _LoginWidgetState extends State<LoginWidget> with TickerProviderStateMixin {
+class _LoginWidgetState extends State<LoginWidget>
+    with TickerProviderStateMixin {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   late TextEditingController emailAddressTextController;
@@ -20,7 +22,8 @@ class _LoginWidgetState extends State<LoginWidget> with TickerProviderStateMixin
   late FocusNode emailAddressFocusNode;
   late FocusNode passwordFocusNode;
   bool passwordVisibility = false;
-  bool rememberMe = false; // Variável para armazenar o estado do botão "Lembrar-me"
+  bool rememberMe =
+      false; // Variável para armazenar o estado do botão "Lembrar-me"
   bool _showErrorMessage = false;
 
   @override
@@ -121,7 +124,8 @@ class _LoginWidgetState extends State<LoginWidget> with TickerProviderStateMixin
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 24),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 12, 0, 24),
                               child: Text(
                                 'Fill out the information below in order to access your account.',
                                 textAlign: TextAlign.center,
@@ -133,7 +137,8 @@ class _LoginWidgetState extends State<LoginWidget> with TickerProviderStateMixin
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 0, 0, 16),
                               child: Container(
                                 width: double.infinity,
                                 child: TextFormField(
@@ -196,7 +201,8 @@ class _LoginWidgetState extends State<LoginWidget> with TickerProviderStateMixin
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 0, 0, 16),
                               child: Container(
                                 width: double.infinity,
                                 child: TextFormField(
@@ -244,7 +250,8 @@ class _LoginWidgetState extends State<LoginWidget> with TickerProviderStateMixin
                                     fillColor: const Color(0xFFF1F4F8),
                                     suffixIcon: InkWell(
                                       onTap: () => setState(
-                                        () => passwordVisibility = !passwordVisibility,
+                                        () => passwordVisibility =
+                                            !passwordVisibility,
                                       ),
                                       focusNode: FocusNode(skipTraversal: true),
                                       child: Icon(
@@ -302,17 +309,25 @@ class _LoginWidgetState extends State<LoginWidget> with TickerProviderStateMixin
                             ElevatedButton(
                               onPressed: () {
                                 setState(() {
-                                  _showErrorMessage = emailAddressTextController.text.isEmpty ||
-                                      passwordTextController.text.isEmpty;
+                                  _showErrorMessage =
+                                      emailAddressTextController.text.isEmpty ||
+                                          passwordTextController.text.isEmpty;
                                 });
 
                                 if (!_showErrorMessage) {
                                   // Perform login action
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MenuPage(),
+                                    ),
+                                  );
                                 }
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: const Color(0xFF37597B),
-                                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 32, vertical: 12),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12),
                                 ),
@@ -332,7 +347,8 @@ class _LoginWidgetState extends State<LoginWidget> with TickerProviderStateMixin
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const CreateaccountWidget(),
+                                    builder: (context) =>
+                                        const CreateaccountWidget(),
                                   ),
                                 );
                               },
